@@ -45,7 +45,7 @@ Refer to the preprint (Figures 3, 4, 5, 6, 7) for detailed graphs and analysis.
     *   Execute the shell scripts in the root directory:
         *   `./run_json_bench.sh`: Runs JSON parser benchmarks.
         *   `./run_glob_correct.sh`: Runs Glob correctness tests.
-        *   `./run_glob_bench.sh`: Runs Glob performance benchmarks using VSCode patterns.
+        *   `./run_glob_bench.sh`: Runs Glob performance benchmarks against VSCode dataset.
         *   `./run_glob_bench2.sh`: Runs Glob edge-case benchmarks (Figure 7).
     *   Inspect the `.sh` and `call_*.lua` scripts for details on how benchmarks are invoked.
 
