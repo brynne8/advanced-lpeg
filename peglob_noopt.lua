@@ -2,7 +2,7 @@ local m = require('lpeg')
 local mt = getmetatable(m.P(0))
 local re = require('re')
 
-local letter = m.P(1) - m.S(',*?[]{}/\\')
+local letter = m.P(1) - m.S('*?[]{}/\\')
 local slash = m.P'/' * m.Cc(m.P'/')
 local notslash = m.P(1) - m.P'/'
 local notcomma = m.P(1) - m.S(',\\')
@@ -116,8 +116,8 @@ local function add_cond(a, b)
     elseif type(b) == 'table' then
       for i = 1, #b do
         table.insert(a, b[i])
-        return a
       end
+      return a
     end
   end
 end

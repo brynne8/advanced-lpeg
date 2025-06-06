@@ -38,7 +38,7 @@ end
 local g = re.compile(esc[[
 doc           <- JSON __ !.
 JSON          <- __ (Number / Object / Array / String / True / False / Null)
-Object        <- ('{' (String __ ':' JSON __ (',' {: String __ ':' JSON :} __)* / __) '}')
+Object        <- {| '{' (String __ ':' JSON __ (',' {: String __ ':' JSON :} __)* / __) '}' |}
                    -> make_table
 Array         <- {| '[' ({: JSON :} __ (',' {: JSON :} __)* / __) ']' |}
 String        <- __ '"' {~ StringBody ~} '"'
@@ -72,15 +72,12 @@ __            <- %s*
     local n2 = tonumber(b, 16)
     return codepoint_to_utf8((n1 - 0xd800) * 0x400 + (n2 - 0xdc00) + 0x10000)
   end,
-  make_table = function(...)
-    local arg = {...}
-    local len = #arg
+  make_table = function(t)
+    local len = #t
     local res = table.new(0, len / 2)
-    local i = 1
-    repeat
-      res[arg[i]] = arg[i + 1]
-      i = i + 2
-    until i > len
+    for i=1, len, 2 do
+      res[t[i]] = t[i + 1]
+    end
     return res
   end,
   add_prop = function(t, a, b)
