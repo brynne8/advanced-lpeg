@@ -2,12 +2,16 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This repository contains the code and benchmarks accompanying the preprint:
+This repository contains the code and benchmarks accompanying the **peer-reviewed publication**:
 
-**Advanced LPeg Techniques: A Dual Case Study Approach**
-*Zixuan Zhu*
-*doi: 10.20944/preprints202504.1786.v1*
-*Link: [https://www.preprints.org/manuscript/202504.1786/v1](https://www.preprints.org/manuscript/202504.1786/v1)*
+**Advanced LPeg Techniques: A Dual Case Study Approach**  
+*Zixuan Zhu*  
+*Journal of Computer Languages, Volume 84, 2025, 101343*  
+*doi: [10.1016/j.cola.2025.101343](https://doi.org/10.1016/j.cola.2025.101343)*  
+*Link: [https://www.sciencedirect.com/science/article/pii/S2590118425000292](https://www.sciencedirect.com/science/article/pii/S2590118425000292)*  
+*Preprint: [Preprints:202504.1786](https://www.preprints.org/manuscript/202504.1786/v1)*
+
+If you use this code or its concepts in your research or project, please cite the published article (see [Citation](#citation) below).
 
 ## Overview
 
@@ -59,11 +63,14 @@ If you use the code or concepts from this repository in your research or project
 
 ```
 @article{zhu2025advanced,
-  author = {Zhu, Zixuan},
-  title = {Advanced LPeg Techniques: A Dual Case Study Approach},
-  journal = {Preprints.org},
-  year = {2025},
-  doi = {10.20944/preprints202504.1786.v1},
-  url = {https://www.preprints.org/manuscript/202504.1786/v1}
+  title   = {Advanced LPeg techniques: A dual case study approach},
+  journal = {Journal of Computer Languages},
+  volume  = {84},
+  pages   = {101343},
+  year    = {2025},
+  issn    = {2590-1184},
+  doi     = {https://doi.org/10.1016/j.cola.2025.101343},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2590118425000292},
+  author  = {Zixuan Zhu}
 }
 ```
